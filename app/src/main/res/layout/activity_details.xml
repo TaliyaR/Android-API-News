@@ -1,64 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.details.DetailsActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="article"
             type="com.example.apiexample.api.response.Article" />
     </data>
 
-    <ImageView
-        android:id="@+id/iv_cover"
-        android:layout_width="400dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_cover">
+        android:layout_height="match_parent"
+        android:paddingHorizontal="5dp"
+        tools:context=".activities.details.DetailsActivity">
 
-        <RelativeLayout
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_tittle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:maxLines="3"
+            android:textStyle="bold"
+            android:layout_below="@id/iv_cover"
+            tools:text="@{article.title}" />
 
-            <TextView
-                android:id="@+id/tv_tittle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="3"
-                android:textStyle="bold"
-                tools:text="@{article.title}" />
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@{article.description}"
+            android:layout_below="@id/tv_tittle"
+            android:layout_marginTop="10dp"/>
 
-            <TextView
-                android:id="@+id/tv_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_tittle"
-                android:layout_marginTop="10dp"
-                tools:text="@{article.content}" />
+        <TextView
+            android:id="@+id/tv_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_description"
+            android:layout_marginTop="5dp"
+            tools:text="@{article.source.name.toString()}" />
+    </RelativeLayout>
 
-            <TextView
-                android:id="@+id/tv_source"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_content"
-                android:layout_marginTop="5dp"
-                tools:text="@{article.source}" />
-
-        </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

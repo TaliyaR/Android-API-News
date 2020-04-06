@@ -14,7 +14,7 @@ data class NewsResponse(
 @Parcelize
 data class Article(
     @SerializedName("author")
-    var author: String,
+    var author: String?,
     @SerializedName("content")
     var content: String,
     @SerializedName("description")
@@ -30,10 +30,10 @@ data class Article(
     @SerializedName("urlToImage")
     var urlToImage: String
 ): Parcelable
-
+@Parcelize
 data class Source(
     @SerializedName("id")
-    var id: Any,
+    var id: @RawValue Any?,
     @SerializedName("name")
-    var name: String
-)
+    var name: String?
+):Parcelable
