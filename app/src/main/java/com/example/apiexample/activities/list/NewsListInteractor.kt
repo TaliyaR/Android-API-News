@@ -2,10 +2,11 @@ package com.example.apiexample.activities.list
 
 import com.example.apiexample.api.response.NewsResponse
 import io.reactivex.Single
+import javax.inject.Inject
 
-class NewsListInteractor {
-    val newsListRepository = NewsListRepository()
+class NewsListInteractor @Inject constructor(
+    private val newsListRepositoryImpl: NewsListRepositoryImpl) {
 
     fun getNewsByCountry(country: String): Single<NewsResponse> =
-        newsListRepository.getNewsByCountry(country)
+        newsListRepositoryImpl.getNewsByCountry(country)
 }

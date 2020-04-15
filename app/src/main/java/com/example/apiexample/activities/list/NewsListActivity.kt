@@ -15,11 +15,13 @@ import com.example.apiexample.activities.viewModel.ViewModelFactory
 import com.example.apiexample.api.response.Article
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
 class NewsListActivity : AppCompatActivity() {
 
-
+    @Inject
     private lateinit var viewModelFactory: ViewModelFactory
+
 
     private lateinit var viewModel: NewsListViewModel
     private var adapter: NewsListAdapter? = null

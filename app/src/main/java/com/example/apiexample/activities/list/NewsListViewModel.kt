@@ -13,7 +13,8 @@ import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
 
 class NewsListViewModel constructor(
-    private val interactor: NewsListInteractor = NewsListInteractor()) : ViewModel() {
+    private val interactor: NewsListInteractor
+) : ViewModel() {
 
     private var loadingLiveData = MutableLiveData<Boolean>()
     private var newsLiveData: MutableLiveData<Response<List<Article>>>? = null
