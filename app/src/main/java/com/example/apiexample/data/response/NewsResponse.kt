@@ -1,11 +1,10 @@
-package com.example.apiexample.api.response
+package com.example.apiexample.data.response
 
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 import kotlinx.android.parcel.RawValue
-import java.io.Serializable
 
 data class NewsResponse(
     @SerializedName("articles")
@@ -29,7 +28,8 @@ data class Article(
     var url: String,
     @SerializedName("urlToImage")
     var urlToImage: String
-): Parcelable
+):Parcelable
+
 @Parcelize
 data class Source(
     @SerializedName("id")

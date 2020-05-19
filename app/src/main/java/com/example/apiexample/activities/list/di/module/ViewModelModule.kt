@@ -1,4 +1,4 @@
-package com.example.apiexample.activities.list.module
+package com.example.apiexample.activities.list.di.module
 
 import androidx.lifecycle.ViewModelProvider
 import com.example.apiexample.activities.viewModel.ViewModelFactory

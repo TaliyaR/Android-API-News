@@ -1,4 +1,4 @@
-package com.example.apiexample.di.scope
+package com.example.apiexample.activities.list.di.scope
 
 import javax.inject.Scope
 

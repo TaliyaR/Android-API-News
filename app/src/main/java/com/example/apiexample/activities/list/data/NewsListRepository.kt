@@ -1,6 +1,6 @@
-package com.example.apiexample.activities.list
+package com.example.apiexample.activities.list.data
 
-import com.example.apiexample.api.response.NewsResponse
+import com.example.apiexample.data.response.NewsResponse
 import io.reactivex.Single
 
 interface NewsListRepository {

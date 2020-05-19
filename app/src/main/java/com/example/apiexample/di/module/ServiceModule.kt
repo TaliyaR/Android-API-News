@@ -1,6 +1,6 @@
 package com.example.apiexample.di.module
 
-import com.example.apiexample.api.NewsService
+import com.example.apiexample.data.NewsService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

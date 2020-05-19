@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apiexample.R
-import com.example.apiexample.api.response.Article
+import com.example.apiexample.data.response.Article
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_article.view.*
 
@@ -16,14 +16,15 @@ class NewsListHolder(
 ) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(article: Article) {
-        itemView.tv_tittle.text = article.title
-        itemView.tv_description.text = article.description
-        itemView.tv_source.text = article.source.name
-        itemView.iv_cover
-        loadPicture(itemView.iv_cover, article.urlToImage)
+        itemView.apply {
+            tv_tittle.text = article.title
+            tv_description.text = article.description
+            tv_source.text = article.source.name
+            loadPicture(itemView.iv_cover, article.urlToImage)
 
-        itemView.setOnClickListener {
-            clickLambda(article)
+            setOnClickListener {
+                clickLambda(article)
+            }
         }
     }
 

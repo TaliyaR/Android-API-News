@@ -1,13 +1,12 @@
 package com.example.apiexample
 
 import android.app.Application
-import com.example.apiexample.di.component.AppComponent
+import com.example.apiexample.di.Injector
 
-class App: Application {
-    lateinit var appComponent: AppComponent
+class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
-
+        Injector.init(this)
     }
 }
