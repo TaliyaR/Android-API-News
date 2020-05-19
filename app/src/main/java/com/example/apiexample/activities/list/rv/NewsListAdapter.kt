@@ -2,7 +2,7 @@ package com.example.apiexample.activities.list.rv
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.apiexample.api.response.Article
+import com.example.apiexample.data.response.Article
 
 class NewsListAdapter(
     private var list: List<Article>,

@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.databinding.DataBindingUtil
 import com.example.apiexample.R
-import com.example.apiexample.api.response.Article
+import com.example.apiexample.data.response.Article
 import com.example.apiexample.databinding.ActivityDetailsBinding
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_details.*

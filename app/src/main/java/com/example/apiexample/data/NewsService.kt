@@ -1,6 +1,6 @@
-package com.example.apiexample.api
+package com.example.apiexample.data
 
-import com.example.apiexample.api.response.NewsResponse
+import com.example.apiexample.data.response.NewsResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
